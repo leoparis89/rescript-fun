@@ -1,4 +1,9 @@
 // src/Greeting.res
+
+type score = int
+
+let myArr: array<score> = [1, 2, 3, 4]
+
 module Cell = {
   @react.component
   let make = () => {
