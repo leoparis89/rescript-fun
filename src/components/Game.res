@@ -14,7 +14,10 @@ module Cell = {
 @react.component
 let make = () => {
   React.useEffect(() => {
-    Js.log("hello")
+    let foo = Belt.Array.map(myArr, v => {
+      Js.log(v)
+      None
+    })
     None
   })
 
