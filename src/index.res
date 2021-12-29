@@ -1,5 +1,7 @@
 %%raw(`
-document.querySelector("body").id = "root";
+var rootEl = document.createElement('div');
+rootEl.id = "root";
+document.body.appendChild(rootEl);
 `)
 // Dom access can actually fail. ReScript
 // is really explicit about handling edge cases!
