@@ -2,6 +2,7 @@
 'use strict';
 
 var React = require("react");
+var Greeting = require("./components/Greeting.bs.js");
 var ReactDom = require("react-dom");
 
 document.querySelector("body").id = "root";
@@ -10,7 +11,7 @@ document.querySelector("body").id = "root";
 var root = document.querySelector("#root");
 
 if (!(root == null)) {
-  ReactDom.render(React.createElement("div", undefined, "Hello world"), root);
+  ReactDom.render(React.createElement("div", undefined, "Hello world", React.createElement(Greeting.make, {})), root);
 }
 
 /*  Not a pure module */
