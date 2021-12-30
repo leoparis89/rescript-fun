@@ -15,15 +15,13 @@ module Cell = {
 
 @react.component
 let make = () => {
-  React.useEffect(() => {
-    let foo = Belt.Array.map(myArr, v => {
-      Js.log(v)
-      None
-    })
-    None
-  })
+  // React.useEffect(() => {
+  //   let foo = Belt.Array.map(myArr, v => {
+  //     Js.log(v)
+  //   })
+  //   None
+  // })
+  let els = myArr->Belt.Array.map(n => <Cell num={n} />)->React.array
 
-  <div style={ReactDOM.Style.make(~background="red", ())}>
-    {React.string("Hello ReScripters hedy!")} <Cell num={3} /> <Cell num={5} />
-  </div>
+  <div style={ReactDOM.Style.make(~background="red", ())}> els </div>
 }
