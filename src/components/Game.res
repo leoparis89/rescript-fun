@@ -6,8 +6,10 @@ let myArr: array<score> = [1, 2, 3, 4]
 
 module Cell = {
   @react.component
-  let make = () => {
-    <div style={ReactDOM.Style.make(~background="blue", ~width="16px", ~height="16px", ())} />
+  let make = (~num: int) => {
+    <div style={ReactDOM.Style.make(~background="lightblue", ~width="32px", ~height="32px", ())}>
+      {React.int(num)}
+    </div>
   }
 }
 
@@ -21,7 +23,7 @@ let make = () => {
     None
   })
 
-  <div style={ReactDOM.Style.make(~background="red", ~fontSize="68px", ())}>
-    {React.string("Hello ReScripters hedy!")} <Cell /> <Cell />
+  <div style={ReactDOM.Style.make(~background="red", ())}>
+    {React.string("Hello ReScripters hedy!")} <Cell num={3} /> <Cell num={5} />
   </div>
 }
