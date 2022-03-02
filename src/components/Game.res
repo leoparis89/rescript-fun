@@ -4,6 +4,10 @@ type score = int
 
 let myArr: array<score> = [1, 2, 3, 4]
 
+let add = (x, y) => x + y
+
+let foo = None
+
 module Cell = {
   @react.component
   let make = (~num: int) => {
