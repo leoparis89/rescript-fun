@@ -10,7 +10,7 @@ let make = () => {
 
   <div>
     {React.string("Hello ReScripters hey!")}
-    <Mui.Typography> {"Some example text"->React.string} </Mui.Typography>
+    <Mui.Typography> {"Sie example text"->React.string} </Mui.Typography>
     <Mui.Button
       color=#secondary
       variant=#outlined
@@ -19,7 +19,7 @@ let make = () => {
         ~containedPrimary=classes["bgColor"],
         (),
       )}>
-      {"Some example text"->React.string}
+      {"Some exddample text"->React.string}
     </Mui.Button>
   </div>
 }

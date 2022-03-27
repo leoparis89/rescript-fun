@@ -1,5 +1,6 @@
 // src/Greeting.res
 
+open Greeting
 type score = int
 
 let myArr: array<score> = [1, 2, 3, 4]
